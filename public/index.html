@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div>Andy Hansen</div>
+  <div>AMI Id: ami-a1d570b7</div>
+  <div>User Data Script</div>
+  <div>
+    #!/bin/bash<br>
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash<br>
+    export NVM_DIR="$HOME/.nvm"<br>
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm<br>
+    nvm install 7.7.1<br>
+    git clone https://github.com/andylhansen/cs462.git<br>
+    cd cs462<br>
+    npm install<br>
+    npm install -g pm2<br>
+    pm2 start index.js<br>
+  </div>
+</body>
+</html>

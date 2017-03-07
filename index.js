@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Andy Hansen')
-});
+app.use(express.static('public'));
 
 app.listen(3000, function () {
   console.log('Listening on port 3000');
